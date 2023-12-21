@@ -1,0 +1,26 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<header>
+	<h1>Alquiler de casas</h1>
+</header>
+
+<nav>
+	<ul>
+		<li>
+			<a href="${pageContext.request.contextPath}/">Inicio</a>
+			<a href="${pageContext.request.contextPath}/registrocasa">Registrar casa</a>
+<c:choose>
+<c:when test="${sessionScope.logged == null}">
+			<a href="${pageContext.request.contextPath}/login">Iniciar Sesión</a>
+			<a href="${pageContext.request.contextPath}/registrousuario">Registrarse</a>
+</c:when>
+<c:otherwise>
+			<a href="${pageContext.request.contextPath}/editarperfil">Editar perfil</a>
+			<a href="${pageContext.request.contextPath}/miscasas">Mis casas</a>
+			<a href="${pageContext.request.contextPath}/logout">Cerrar Sesión</a>
+</c:otherwise>
+</c:choose>
+		</li>	
+	</ul>
+</nav>

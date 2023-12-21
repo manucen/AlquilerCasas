@@ -1,0 +1,22 @@
+<ul id="MenuBar1" class="MenuBarHorizontal">
+	<li><a href="#" class="MenuBarItemSubmenu">Autores</a>
+		<ul>
+			<li><a
+				href="${pageContext.request.contextPath}/altaautor.jsp">Nuevo
+					Autor</a></li>
+			<li><a
+				href="${pageContext.request.contextPath}/controller?operacion=listarAutores">Listado
+					de Autores</a></li>
+		</ul></li>
+	<li><a class="MenuBarItemSubmenu" href="#">Sesion</a>
+		<ul>
+			<li><a
+				href="${pageContext.request.contextPath}/controller?operacion=logout">Logout</a></li>
+		</ul>
+</ul>
+<script type="text/javascript">
+	var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {
+		imgDown : "/biblioteca-web/resources/img/SpryMenuBarDownHover.gif",
+		imgRight : "/Biblioteca/resources/img/SpryMenuBarRightHover.gif"
+	});
+</script>
